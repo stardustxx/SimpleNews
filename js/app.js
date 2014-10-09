@@ -11,7 +11,7 @@ var binding = function(itemHolder){
 	$(link).click(function(){
 		console.log('running');
 		var name = link.getAttribute("id") + ".php";
-		$('#mainContent').load(name);
+		$('#mainContent').hide().load(name).fadeIn('slow');
 	})
 }
 
