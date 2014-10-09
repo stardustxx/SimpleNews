@@ -24,6 +24,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- adding one extra stupid line of comment here just for testing -->
+
 </head>
 
 <body>
