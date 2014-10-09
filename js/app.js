@@ -14,7 +14,8 @@ var binding = function(itemHolder){
 		$('#loading').show(500);
 		var name = link.getAttribute("id") + ".php";
 		$('#mainContent').load(name, function(){
-			$('#mainContent').show(500);
+			$('#mainContent').show();
+			$('#mainContent').fadeIn('slow');
 			$('#loading').hide(500);
 		});
 	})
