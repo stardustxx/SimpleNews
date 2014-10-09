@@ -1,0 +1,16 @@
+#logo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1001;
+}
+
+.perPost {
+	margin-top: 25px;
+	display: block;
+}
+
+.perPost img {
+  max-width: 500px;
+  height: auto;
+}
