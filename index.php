@@ -60,9 +60,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Simple News</h1>
-                        <div id = "loading">
+                        <!-- <div id = "loading">
                           <img src="http://jimpunk.net/Loading/wp-content/uploads/loading1.gif"/>
-                         </div>
+                         </div> -->
                         <div id = "mainContent">
 
                         </div>
