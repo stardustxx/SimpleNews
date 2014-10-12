@@ -1,4 +1,5 @@
 var sideBar = document.getElementById("sideNav");
+var mainContent = true;
 
 var show = function(smth){
 	console.log(smth.innerText);
@@ -6,10 +7,20 @@ var show = function(smth){
 
 var binding = function(itemHolder){
 	console.log("binding");
+	var hidingSpeed;
 	var link = itemHolder.querySelector("a");
 	$(link).click(function(){
 		console.log('running');
-		$('#mainContent').hide(500, function(){
+		if (mainContent == true) {
+			console.log("true");
+			hidingSpeed = 0;
+			mainContent = false;
+		}
+		else {
+			console.log("false");
+			hidingSpeed = 300;
+		}
+		$('#mainContent').hide(hidingSpeed, function(){
 			//$('#loading').show(500);
 			var name = link.getAttribute("id") + ".php";
 			$('#mainContent').load(name, function(){
