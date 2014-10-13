@@ -54,6 +54,12 @@
         </div>
         <!-- /#sidebar-wrapper -->
 
+        <div id = "articleMenu-wrapper">
+            <div id = "articleContent">
+                <h1>TESTING</h1>
+            </div>
+        </div>
+
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">

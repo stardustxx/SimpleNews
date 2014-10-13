@@ -20,16 +20,15 @@ var binding = function(itemHolder){
 			console.log("false");
 			hidingSpeed = 300;
 		}
-		$('#mainContent').hide(hidingSpeed, function(){
+		$('#articleContent').hide(hidingSpeed, function(){
 			//$('#loading').show(500);
 			var name = link.getAttribute("id") + ".php";
-			$('#mainContent').load(name, function(){
+			$('#articleContent').load(name, function(){
 				//$('#mainContent').show();
-				$('#mainContent').fadeIn('slow');
+				$('#articleContent').fadeIn('slow');
 				//$('#loading').hide(500);
 			});
 		});
-		
 	})
 }
 
@@ -37,5 +36,5 @@ $(document).ready(function(){
 	for (var i = 0; i < sideBar.children.length	; i++){
 		binding(sideBar.children[i]);
 	}
-	$('#loading').hide(0);
+	//$('#loading').hide(0);
 })
