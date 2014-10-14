@@ -1,8 +1,9 @@
 var sideBar = document.getElementById("sideNav");
+var itemList;;
 var mainContent = true;
 
-var show = function(smth){
-	console.log(smth.innerText);
+var binding2 = function(x){
+	console.log("binding article elements" + x);
 }
 
 var binding = function(itemHolder){
@@ -29,12 +30,22 @@ var binding = function(itemHolder){
 				//$('#loading').hide(500);
 			});
 		});
+		$('#itemLists').ready(function(){
+			itemList = document.getElementById("itemLists");
+			for (var i = 0; i < itemList.children.length; i++){
+					binding2(sideBar.children[i]);
+				}
+		});
 	})
 }
 
+
+
 $(document).ready(function(){
-	for (var i = 0; i < sideBar.children.length	; i++){
+	for (var i = 0; i < sideBar.children.length; i++){
 		binding(sideBar.children[i]);
 	}
 	//$('#loading').hide(0);
 })
+
+

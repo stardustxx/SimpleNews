@@ -9,13 +9,13 @@
 
     echo "<ul class = 'itemLists'>";
     foreach ($perItem as $news){
-        echo "<li class = 'perPost'>";
+        echo "<li class = 'perPost'><div class = 'perPostBlock'>";
         $namespace = $news->getNameSpaces(true);
         $ns_media = $news->children($namespace['media']);
         echo "<img src = '" . $ns_media->thumbnail->attributes()->url . "'/>";
         echo "<h4>" . $news->title . "</h4>";
         //echo "<p class = 'description'>" . $news->description . "</p>";
-        echo "</li>";
+        echo "</div></li>";
     }
     echo "</ul>";
 ?>
