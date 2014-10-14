@@ -7,13 +7,11 @@
           echo "<h1 class = 'title'>" . $title . "</h1>";
     $perItem = $rssxml->channel->item;
 
-    echo "<ul id = 'itemLists'>";
     foreach ($perItem as $news){
-        echo "<li class = 'perPost'><div class = 'perPostBlock'>";
+        echo "<div class = 'perPost'>";
         echo "<img src = '" . $news->enclosure->attributes()->url . "'/>";
         echo "<h4>" . $news->title . "</h4>";
         //echo "<p>" . $news->description . "</p>";
-        echo "</div></li>";
+        echo "</div>";
     }
-    echo "</ul>";
 ?>

@@ -154,20 +154,7 @@
 }
 
 .perPost {
-  margin: 25px 0 0 0;
+  margin: 100px 0 0 0;
   display: inline-block;
-  width: 250px;
-  background-color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.perPostBlock img {
-    max-width: 200px;
-    height: auto;
-    margin: 0 auto;
-}
-
-body {
-    background-color: #FAEBD7;
+  max-width: 250px;
 }

@@ -1,9 +1,8 @@
 var sideBar = document.getElementById("sideNav");
-var itemList;;
 var mainContent = true;
 
-var binding2 = function(x){
-	console.log("binding article elements" + x);
+var show = function(smth){
+	console.log(smth.innerText);
 }
 
 var binding = function(itemHolder){
@@ -28,24 +27,21 @@ var binding = function(itemHolder){
 				//$('#mainContent').show();
 				$('#articleContent').fadeIn('slow');
 				//$('#loading').hide(500);
+				bindArticles();
 			});
-		});
-		$('#itemLists').ready(function(){
-			itemList = document.getElementById("itemLists");
-			for (var i = 0; i < itemList.children.length; i++){
-					binding2(sideBar.children[i]);
-				}
 		});
 	})
 }
 
-
+var bindArticles = function(){
+	//checks for articles
+	$('.perPost').click(function(){
+		alert("ID: " + this.id);
+	})
+}
 
 $(document).ready(function(){
-	for (var i = 0; i < sideBar.children.length; i++){
+	for (var i = 0; i < sideBar.children.length	; i++){
 		binding(sideBar.children[i]);
 	}
-	//$('#loading').hide(0);
 })
-
-
