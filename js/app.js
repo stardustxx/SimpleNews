@@ -35,7 +35,7 @@ var binding = function(itemHolder){
 
 var bindArticles = function(){
 	//checks for articles
-	$('a').click(function(){
+	$('.perPost').click(function(){
 		alert("ID: " + this.id);
 	})
 }

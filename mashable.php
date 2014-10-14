@@ -12,15 +12,13 @@
 
     echo "<ul class = 'itemLists'>";
     foreach ($perItem as $news){
-        echo "<li class = 'perPost'>";
+        echo "<li id='mash$count' class = 'perPost'>";
         $namespace = $news->getNameSpaces(true);
         $ns_media = $news->children($namespace['media']);
         //create an anchor tag
-        echo "<a href='#' id='mash$count'>";
         echo "<img src = '" . $ns_media->thumbnail->attributes()->url . "'/>";
         echo "<h4>". $news->title . "</h4>";
         //echo "<p class = 'description'>" . $news->description . "</p>";
-        echo "</a>";
         echo "</li>";
         //incredment count
         $count++;
