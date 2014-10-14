@@ -27,8 +27,16 @@ var binding = function(itemHolder){
 				//$('#mainContent').show();
 				$('#articleContent').fadeIn('slow');
 				//$('#loading').hide(500);
+				bindArticles();
 			});
 		});
+	})
+}
+
+var bindArticles = function(){
+	//checks for articles
+	$('a').click(function(){
+		alert("ID: " + this.id);
 	})
 }
 
@@ -36,5 +44,4 @@ $(document).ready(function(){
 	for (var i = 0; i < sideBar.children.length	; i++){
 		binding(sideBar.children[i]);
 	}
-	//$('#loading').hide(0);
 })
